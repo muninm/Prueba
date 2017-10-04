@@ -80,7 +80,7 @@ if (window.DeviceMotionEvent != undefined) {
 		sphere.style.top = y + "px";
 		sphere.style.left = x + "px";
 		
-		myMoveX(x*10);
+		myMoveX(x/100);
 	//	myMoveY(y*10);
 	}, 25);
 } 
@@ -92,6 +92,7 @@ function boundingBoxCheck(){
 	if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
 	if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
 	*/
+	if(mitadAncho<=0) {x=0}
 }
 
 
