@@ -79,8 +79,9 @@ if (window.DeviceMotionEvent != undefined) {
 		
 		sphere.style.top = y + "px";
 		sphere.style.left = x + "px";
-		
-		myMoveX(x/100);
+		    if((Math.abs(mitadAncho)+400<= anchoImg && vx<0) || (mitadAncho>=0 && vx>0)  )
+		    {		myMoveX(x/100);
+		    }
 	//	myMoveY(y*10);
 	}, 25);
 } 
@@ -151,7 +152,7 @@ function myMoveX(intervalX) {
   var pos=0;
   var sign=Math.sign(intervalX);
     function frame() {
-    if( ((Math.abs(mitadAncho)+400>= anchoImg && sign==-1) || (mitadAncho>=0*anchoImg && sign==1)  )
+    if( ((Math.abs(mitadAncho)+400>= anchoImg && sign==-1) || (mitadAncho>=0 && sign==1)  )
     	|| Math.abs(intervalX)<pos) {
       clearInterval(id);
     } else {
@@ -161,7 +162,7 @@ function myMoveX(intervalX) {
     }
   }
   document.getElementById("movX").innerHTML = intervalX;
-  document.getElementById("posX").innerHTML = mitadAncho+"px " ;
+  document.getElementById("posX").innerHTML = mitadAncho ;
 
 }
 
