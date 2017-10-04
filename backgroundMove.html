@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Accelerometer Javascript Test</title>
+<meta name="viewport" content="width=device-width,user-scalable=yes" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+	#top-image {
+background:url('https://s-media-cache-ak0.pinimg.com/736x/63/0f/0e/630f0ef3f6f3126ca11f19f4a9b85243--dachshund-puppies-weenie-dogs.jpg') -25px -50px;
+top:0;
+z-index:0;
+  background-size: calc(200%);
+}
+
+
+</style>
+</head>
+<body>
+<div style="border: 50px solid red;width:500px;height: 500px;" >
+		<div id="top-image"></div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+var movementStrength = 100;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+$("#top-image").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 50;
+          $('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
+});
+});
+</script>
+</body>
+</html>
