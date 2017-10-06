@@ -19,7 +19,7 @@ body {
 	<li>acceleration y: <span id="accelerationY"></span>g</li>
 	<li>acceleration z: <span id="accelerationZ"></span>g</li-->
 	<li>movX: <span id="movX"/> <span id="posX"/></li>
-	<li>movYY: <span id="movY"/> <span id="posY"/></li>
+	<li>movYYY: <span id="movY"/> <span id="posY"/></li>
 	<!--li>rotation alpha: <span id="rotationAlpha"></span>degree</li>
 	<li>rotation beta: <span id="rotationBeta"></span>degree</li>
 	<li>rotation gamma: <span id="rotationGamma"></span>degree</li-->
@@ -43,7 +43,7 @@ window.ondevicemotion = function(event) {
     yA = -(accY / 10) * movement;
 		    
     myMoveX(xA);
-    myMoveY(yA);
+    myMoveY(yA+10);
 }
 
 function getMeta(varA, varB) {
