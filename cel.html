@@ -22,9 +22,9 @@ body {
     <h1>Accelerometer Javascript Test</h1>
     <div id="sphere"></div>
 <ul>
-	<li>acceleration x: <span id="accelerationX"></span>g</li>
+	<!--li>acceleration x: <span id="accelerationX"></span>g</li>
 	<li>acceleration y: <span id="accelerationY"></span>g</li>
-	<li>acceleration z: <span id="accelerationZ"></span>g</li>
+	<li>acceleration z: <span id="accelerationZ"></span>g</li-->
 	<li>movX: <span id="movX"/> <span id="posX"/></li>
 	<li>movY: <span id="movY"/> <span id="posY"/></li>
 	<!--li>rotation alpha: <span id="rotationAlpha"></span>degree</li>
@@ -49,7 +49,7 @@ window.ondevicemotion = function(event) {
     xA = -(accX / 10) * movement;
     yA = -(accY / 10) * movement;
 		    
-    moveX(xA);
+    myMoveX(xA);
     //moveY(yA)
 }
 
@@ -118,7 +118,7 @@ function myMoveX(intervalX) {
     }
   }
   document.getElementById("movX").innerHTML = intervalX;
-  document.getElementById("posX").innerHTML = mitadAncho ;
+//  document.getElementById("posX").innerHTML = mitadAncho ;
 
 }
 
