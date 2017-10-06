@@ -26,7 +26,7 @@ body {
 	<li>acceleration y: <span id="accelerationY"></span>g</li>
 	<li>acceleration z: <span id="accelerationZ"></span>g</li-->
 	<li>movX: <span id="movX"/> <span id="posX"/></li>
-	<li>movY: <span id="movY"/> <span id="posY"/></li>
+	<li>movYY: <span id="movY"/> <span id="posY"/></li>
 	<!--li>rotation alpha: <span id="rotationAlpha"></span>degree</li>
 	<li>rotation beta: <span id="rotationBeta"></span>degree</li>
 	<li>rotation gamma: <span id="rotationGamma"></span>degree</li-->
@@ -138,6 +138,8 @@ function myMoveY(intervalY) {
 	  tagMarco.style.background=styleImg+ mitadAncho+"px "+mitadAlto+"px";
     }
   }
+    document.getElementById("movY").innerHTML = intervalX;
+
 }
 
 
